@@ -367,9 +367,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* ==========================================================================
- * HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
- * ========================================================================== */
 html, button, input, select, textarea {
   color: #222222; }
 
@@ -406,9 +403,6 @@ textarea {
   color: black;
   padding: 0.2em 0; }
 
-/* ===== Initializr Styles ==================================================
- * Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
- * ========================================================================== */
 body {
   font: 16px/26px Helvetica, Helvetica Neue, Arial; }
 
@@ -416,20 +410,8 @@ body {
   width: 90%;
   margin: 0 5%; }
 
-/* ===================
- *  ALL: Orange Theme
- * =================== */
 .header-container {
-  border-bottom: 20px solid #e44d26; }
-
-.footer-container, .main aside {
-  border-top: 20px solid #e44d26; }
-
-.header-container, .footer-container, .main aside {
-  background: #f16529; }
-
-.title {
-  color: white; }
+  background: url("../images/layout/header-tile.png") repeat-x; }
 
 /* ==============
  *  MOBILE: Menu
@@ -440,12 +422,14 @@ nav ul {
 nav a {
   display: block;
   margin-bottom: 10px;
-  padding: 15px 0;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
   color: white;
-  background: #e44d26; }
+  width: 92px;
+  height: 39px;
+  line-height: 39px;
+  text-transform: uppercase; }
   nav a:hover, nav a:visited {
     color: white; }
   nav a:hover {
@@ -466,15 +450,65 @@ nav a {
   color: white;
   padding: 20px 0; }
 
-/* ===============
- *  ALL: IE Fixes
- * =============== */
-.ie7 .title {
-  padding-top: 20px; }
-
 /* ==========================================================================
- * Author's custom styles
+ * Custom styles
  * ========================================================================== */
+h1#logo {
+  background: url("../images/layout/logo.png") no-repeat center center;
+  width: 194px;
+  height: 49px;
+  float: left;
+  text-indent: -999px;
+  margin: 10px 0; }
+
+nav ul li#login a {
+  border: 1px solid #407900;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+div#top {
+  min-height: 722px; }
+  div#top .wrapper {
+    position: relative; }
+
+div#unlock {
+  position: absolute;
+  width: 652px;
+  margin-top: 133px; }
+  div#unlock h2 {
+    font-size: 48px; }
+  div#unlock p {
+    color: #616263;
+    width: 593px;
+    font-size: 22px; }
+  div#unlock div#rating {
+    background: url("../images/layout/five-stars.png") no-repeat;
+    padding-top: 28px;
+    margin-top: 240px; }
+    div#unlock div#rating p {
+      color: #010101;
+      font-size: 14px;
+      margin: 0; }
+      div#unlock div#rating p span {
+        display: block;
+        color: #97999b; }
+
+div#phones {
+  position: absolute;
+  right: 0;
+  width: 531px;
+  height: 722px;
+  padding-left: 162px; }
+  div#phones div#sdk-banner {
+    background: url("../images/layout/sdk-ribbon.png") no-repeat;
+    width: 241px;
+    height: 78px;
+    text-indent: -999px;
+    position: absolute;
+    left: 0;
+    top: 423px; }
+
 /* ==========================================================================
  * Media Queries
  * ========================================================================== */
@@ -484,10 +518,7 @@ nav a {
    * ==================== */
   nav a {
     float: left;
-    width: 27%;
-    margin: 0 1.7%;
-    padding: 25px 2%;
-    margin-bottom: 0; }
+    width: 27%; }
   nav li:first-child a {
     margin-left: 0; }
   nav li:last-child a {
@@ -504,10 +535,10 @@ nav a {
   /* ====================
    *  WIDE: CSS3 Effects
    * ==================== */
-  .header-container, .main aside {
-    -webkit-box-shadow: 0 5px 10px #aaaaaa;
-    -moz-box-shadow: 0 5px 10px #aaaaaa;
-    box-shadow: 0 5px 10px #aaaaaa; }
+  .header-container {
+    -webkit-box-shadow: 0 1px 10px #aaaaaa;
+    -moz-box-shadow: 0 1px 10px #aaaaaa;
+    box-shadow: 0 1px 10px #aaaaaa; }
 
   /* ============
    *  WIDE: Menu
