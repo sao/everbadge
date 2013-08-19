@@ -435,10 +435,6 @@ body {
     color: white;
     padding: 0px 5% 10px; }
 
-.footer-container footer {
-  color: white;
-  padding: 20px 0; }
-
 /* custom styles */
 .hide-text {
   text-indent: 100%;
@@ -667,6 +663,123 @@ nav {
   background: url("../images/layout/bg-team.jpg") no-repeat center center;
   background-size: cover;
   min-height: 1165px; }
+
+.team-members {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .team-members li {
+    float: left;
+    position: relative;
+    width: 536px;
+    height: 156px;
+    border: 2px solid white; }
+    .team-members li .team-social {
+      position: absolute;
+      right: 0;
+      top: 37px;
+      width: 40px; }
+      .team-members li .team-social a {
+        display: block;
+        width: 40px;
+        height: 40px; }
+        .team-members li .team-social a.twitter {
+          background: url("../images/layout/team-twitter.png") no-repeat; }
+        .team-members li .team-social a.linkedin {
+          background: url("../images/layout/team-linkedin.png") no-repeat; }
+    .team-members li#sam {
+      background: url("../images/team/sam.png") no-repeat 17px 17px; }
+
+.team-member-name,
+.team-member-role {
+  font-family: "museo-sans-rounded", sans-serif;
+  margin: 0 0 0 160px; }
+
+.team-member-name {
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 10px; }
+
+.team-member-role {
+  font-size: 18px; }
+
+.locations {
+  border-top: 4px solid #010101;
+  margin: 0 auto;
+  padding: 30px 20px;
+  width: 318px;
+  text-align: center; }
+  .locations li {
+    display: inline; }
+
+.footer-container footer {
+  color: #6b6b6e;
+  padding: 20px 0; }
+
+footer a {
+  color: #6b6b6e; }
+
+hr {
+  clear: both;
+  height: 0px;
+  border-top: 1px solid #ebedef;
+  margin: 60px 0; }
+
+footer h2.title {
+  color: black;
+  font-size: 26px;
+  text-align: left;
+  margin-bottom: 36px; }
+
+#sitemap,
+#contact-hours,
+#social-contact {
+  float: left;
+  width: 344px;
+  height: 224px; }
+
+#footer-nav {
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+  #footer-nav li {
+    float: left;
+    width: 160px;
+    list-style: none;
+    margin-bottom: 24px; }
+    #footer-nav li a {
+      text-decoration: none; }
+
+#contact-hours p {
+  margin: 0 0 50px 0; }
+
+#social-contact ul {
+  margin: 0 0 0 134px; }
+#social-contact li {
+  list-style: none;
+  margin-bottom: 0.75em; }
+  #social-contact li a {
+    background: url("../images/layout/social-contact.png") no-repeat;
+    display: block;
+    padding-left: 42px;
+    height: 32px;
+    line-height: 32px;
+    text-decoration: none; }
+    #social-contact li a.facebook {
+      background-position: 0 -32px; }
+    #social-contact li a.twitter {
+      background-position: 0 -64px; }
+    #social-contact li a.linkedin {
+      background-position: 0 -96px; }
+
+#credits {
+  margin-bottom: 20px;
+  overflow: hidden; }
+  #credits p {
+    float: left;
+    color: #afafb3; }
+  #credits #ada {
+    float: right; }
 
 a.signup {
   color: white;
