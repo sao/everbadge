@@ -163,6 +163,7 @@ nav
         display: block
         color: #97999b
 #phones
+  display: none
   position: absolute
   right: -30px
   width: 531px
@@ -185,6 +186,9 @@ nav
     .tool-desc
       width: 436px
       float: right
+      a
+        color: #fff
+        text-decoration: none
       h3
         color: #00a1ff
     .icon
@@ -205,10 +209,6 @@ nav
   text-align: center
   .slider-nav
     height: 0
-    ul, li
-      list-style: none
-      height: 0
-      margin: 0
     #prev, #next
       display: block
       width: 25px
@@ -313,12 +313,23 @@ nav
   padding: 0
   list-style: none
   li
+    background-repeat: no-repeat
+    background-position: 17px 17px
     float: left
     position: relative
     width: 536px
     height: 156px
-    border: 2px solid #FFF
+    margin: 2px
+    &:hover
+      cursor: pointer
+      border: 2px solid #FFF
+      margin: 0
+      > p
+        display: block
+      > .team-social
+        display: block
     .team-social
+      display: none
       position: absolute
       right: 0
       top: 37px
@@ -328,14 +339,46 @@ nav
         width: 40px
         height: 40px
         &.twitter
-          background: url("../images/layout/team-twitter.png") no-repeat
+          background-image: url("../images/layout/team-twitter.png")
+        &.facebook
+          background-image: url("../images/layout/team-facebook.png")
+        &.dribbble
+          background-image: url("../images/layout/team-dribbble.png")
         &.linkedin
-          background: url("../images/layout/team-linkedin.png") no-repeat
+          background-image: url("../images/layout/team-linkedin.png")
     &#sam
-      background: url("../images/team/sam.png") no-repeat 17px 17px
+      background-image: url("../images/team/sam-bw.png")
+      &.on
+        background-image: url("../images/team/sam.png")
+    &#shay
+      background-image: url("../images/team/shay-bw.png")
+      &.on
+        background-image: url("../images/team/shay.png")
+    &#ryan
+      background-image: url("../images/team/ryan-bw.png")
+      &.on
+        background-image: url("../images/team/ryan.png")
+    &#nik
+      background-image: url("../images/team/nik-bw.png")
+      &.on
+        background-image: url("../images/team/nik.png")
+    &#keyur
+      background-image: url("../images/team/keyur-bw.png")
+      &.on
+        background-image: url("../images/team/keyur.png")
+    &#chad
+      background-image: url("../images/team/chad-bw.png")
+      &.on
+        background-image: url("../images/team/chad.png")
+    &#blog a
+      display: block
+      width: 160px
+      height: 156px
+      background: url("../images/layout/blog.png") no-repeat 17px 17px
 
 .team-member-name,
 .team-member-role
+  display: none
   font-family: "museo-sans-rounded",sans-serif
   margin: 0 0 0 160px
 
@@ -381,6 +424,16 @@ footer h2.title
   float: left
   width: 344px
   height: 224px
+
+#sitemap a
+  color: #6b6b6e
+  -moz-transition: all 0.2s linear
+  -webkit-transition: all 0.2s linear
+  -o-transition: all 0.2s linear
+  transition: all 0.2s linear
+  &:hover
+    color: #00a1ff
+
 #footer-nav
   padding: 0
   margin: 0

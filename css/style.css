@@ -520,6 +520,7 @@ nav {
         color: #97999b; }
 
 #phones {
+  display: none;
   position: absolute;
   right: -30px;
   width: 531px;
@@ -542,6 +543,9 @@ nav {
     #tools .tool .tool-desc {
       width: 436px;
       float: right; }
+      #tools .tool .tool-desc a {
+        color: white;
+        text-decoration: none; }
       #tools .tool .tool-desc h3 {
         color: #00a1ff; }
     #tools .tool .icon {
@@ -562,10 +566,6 @@ nav {
   text-align: center; }
   #slider .slider-nav {
     height: 0; }
-    #slider .slider-nav ul, #slider .slider-nav li {
-      list-style: none;
-      height: 0;
-      margin: 0; }
     #slider .slider-nav #prev, #slider .slider-nav #next {
       display: block;
       width: 25px;
@@ -669,12 +669,23 @@ nav {
   padding: 0;
   list-style: none; }
   .team-members li {
+    background-repeat: no-repeat;
+    background-position: 17px 17px;
     float: left;
     position: relative;
     width: 536px;
     height: 156px;
-    border: 2px solid white; }
+    margin: 2px; }
+    .team-members li:hover {
+      cursor: pointer;
+      border: 2px solid white;
+      margin: 0; }
+      .team-members li:hover > p {
+        display: block; }
+      .team-members li:hover > .team-social {
+        display: block; }
     .team-members li .team-social {
+      display: none;
       position: absolute;
       right: 0;
       top: 37px;
@@ -684,14 +695,46 @@ nav {
         width: 40px;
         height: 40px; }
         .team-members li .team-social a.twitter {
-          background: url("../images/layout/team-twitter.png") no-repeat; }
+          background-image: url("../images/layout/team-twitter.png"); }
+        .team-members li .team-social a.facebook {
+          background-image: url("../images/layout/team-facebook.png"); }
+        .team-members li .team-social a.dribbble {
+          background-image: url("../images/layout/team-dribbble.png"); }
         .team-members li .team-social a.linkedin {
-          background: url("../images/layout/team-linkedin.png") no-repeat; }
+          background-image: url("../images/layout/team-linkedin.png"); }
     .team-members li#sam {
-      background: url("../images/team/sam.png") no-repeat 17px 17px; }
+      background-image: url("../images/team/sam-bw.png"); }
+      .team-members li#sam.on {
+        background-image: url("../images/team/sam.png"); }
+    .team-members li#shay {
+      background-image: url("../images/team/shay-bw.png"); }
+      .team-members li#shay.on {
+        background-image: url("../images/team/shay.png"); }
+    .team-members li#ryan {
+      background-image: url("../images/team/ryan-bw.png"); }
+      .team-members li#ryan.on {
+        background-image: url("../images/team/ryan.png"); }
+    .team-members li#nik {
+      background-image: url("../images/team/nik-bw.png"); }
+      .team-members li#nik.on {
+        background-image: url("../images/team/nik.png"); }
+    .team-members li#keyur {
+      background-image: url("../images/team/keyur-bw.png"); }
+      .team-members li#keyur.on {
+        background-image: url("../images/team/keyur.png"); }
+    .team-members li#chad {
+      background-image: url("../images/team/chad-bw.png"); }
+      .team-members li#chad.on {
+        background-image: url("../images/team/chad.png"); }
+    .team-members li#blog a {
+      display: block;
+      width: 160px;
+      height: 156px;
+      background: url("../images/layout/blog.png") no-repeat 17px 17px; }
 
 .team-member-name,
 .team-member-role {
+  display: none;
   font-family: "museo-sans-rounded", sans-serif;
   margin: 0 0 0 160px; }
 
@@ -737,6 +780,15 @@ footer h2.title {
   float: left;
   width: 344px;
   height: 224px; }
+
+#sitemap a {
+  color: #6b6b6e;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  #sitemap a:hover {
+    color: #00a1ff; }
 
 #footer-nav {
   padding: 0;
