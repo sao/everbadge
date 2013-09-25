@@ -1,4 +1,4 @@
-/* normalize.css v1.1.0 | MIT License | git.io/normalize */
+/*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
  * HTML5 display definitions
  * ========================================================================== */
@@ -573,21 +573,39 @@ nav {
     #slider .slider-nav #prev {
       background: url("../images/layout/slider-prev.png") no-repeat;
       position: absolute;
-      left: 15px;
-      bottom: 320px; }
+      left: -40px;
+      bottom: 400px; }
       #slider .slider-nav #prev:hover {
         background-position: 0px -42px; }
     #slider .slider-nav #next {
       background: url("../images/layout/slider-next.png") no-repeat;
       position: absolute;
-      right: 15px;
-      bottom: 320px; }
+      right: -40px;
+      bottom: 400px; }
       #slider .slider-nav #next:hover {
         background-position: 0px -42px; }
-  #slider .slide .title {
-    margin-bottom: 14px; }
-  #slider .slide p {
-    margin-bottom: 2em; }
+  #slider .slide {
+    margin-bottom: -26px; }
+    #slider .slide .title {
+      margin-bottom: 14px; }
+    #slider .slide p {
+      margin-bottom: 2em; }
+    #slider .slide .slidesjs-previous, #slider .slide .slidesjs-next {
+      display: none; }
+    #slider .slide .slidesjs-pagination {
+      margin: 10px 0;
+      height: 6px; }
+      #slider .slide .slidesjs-pagination li {
+        display: inline-block;
+        margin: 0 10px; }
+        #slider .slide .slidesjs-pagination li a {
+          display: block;
+          background: url("../images/layout/slider-dot-sm.png") no-repeat;
+          width: 6px;
+          height: 6px;
+          text-indent: -9999px; }
+          #slider .slide .slidesjs-pagination li a.active {
+            background-position: -6px 0; }
 
 #sdk {
   background: #eff1f3;
@@ -676,8 +694,9 @@ nav {
     width: 536px;
     height: 156px;
     margin: 2px; }
+    .team-members li.no-border:hover {
+      border-color: transparent; }
     .team-members li:hover {
-      cursor: pointer;
       border: 2px solid white;
       margin: 0; }
       .team-members li:hover > p {

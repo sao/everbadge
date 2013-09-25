@@ -216,22 +216,39 @@ nav
     #prev
       background: url("../images/layout/slider-prev.png") no-repeat
       position: absolute
-      left: 15px
-      bottom: 320px
+      left: -40px
+      bottom: 400px
       &:hover
         background-position: 0px -42px
     #next
       background: url("../images/layout/slider-next.png") no-repeat
       position: absolute
-      right: 15px
-      bottom: 320px
+      right: -40px
+      bottom: 400px
       &:hover
         background-position: 0px -42px
   .slide
+    margin-bottom: -26px
     .title
       margin-bottom: 14px
     p
       margin-bottom: 2em
+    .slidesjs-previous, .slidesjs-next
+      display: none
+    .slidesjs-pagination
+      margin: 10px 0
+      height: 6px
+      li
+        display: inline-block
+        margin: 0 10px
+        a
+          display: block
+          background: url("../images/layout/slider-dot-sm.png") no-repeat
+          width: 6px
+          height: 6px
+          text-indent: -9999px
+          &.active
+            background-position: -6px 0
 
 #sdk
   background: #eff1f3
@@ -320,8 +337,10 @@ nav
     width: 536px
     height: 156px
     margin: 2px
+    &.no-border
+      &:hover
+        border-color: transparent
     &:hover
-      cursor: pointer
       border: 2px solid #FFF
       margin: 0
       > p
