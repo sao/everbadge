@@ -67,10 +67,24 @@ body
  *  MOBILE: Menu
  * ==============
 
-
-/* ==============
- *  MOBILE: Main
- * ==============
+#jPanelMenu-menu
+  background: url('../images/layout/mobile-menu-bg.png') repeat-y top right
+  ul
+    margin: 0
+    padding: 0
+    li
+      cursor: pointer
+      a
+        display: block
+        height: 60px
+        line-height: 60px
+        color: #b2b5b6
+        text-decoration: none
+        padding-left: 40px
+        border-bottom: 1px solid #212122
+        &:hover
+          color: #00a1ff
+          background: #212122
 
 .main
   padding: 30px 0
@@ -79,7 +93,6 @@ body
   aside
     color: white
     padding: 0px 5% 10px
-
 
 /* custom styles */
 .hide-text
@@ -109,7 +122,9 @@ h3
   height: 49px
   float: left
   margin: 10px 0
-nav
+#mobile-menu, .mobile-menu-trigger
+  display: none
+#desk-menu
   float: right
   ul
     width: 92px
@@ -144,6 +159,8 @@ nav
   position: absolute
   width: 652px
   margin-top: 133px
+  #mobile-phones
+    display: none
   .title
     text-align: left
     font-size: 62px
@@ -163,7 +180,6 @@ nav
         display: block
         color: #97999b
 #phones
-  display: none
   position: absolute
   right: -30px
   width: 531px
@@ -367,27 +383,27 @@ nav
           background-image: url("../images/layout/team-linkedin.png")
     &#sam
       background-image: url("../images/team/sam-bw.png")
-      &.on
+      &:hover
         background-image: url("../images/team/sam.png")
     &#shay
       background-image: url("../images/team/shay-bw.png")
-      &.on
+      &:hover
         background-image: url("../images/team/shay.png")
     &#ryan
       background-image: url("../images/team/ryan-bw.png")
-      &.on
+      &:hover
         background-image: url("../images/team/ryan.png")
     &#nik
       background-image: url("../images/team/nik-bw.png")
-      &.on
+      &:hover
         background-image: url("../images/team/nik.png")
     &#keyur
       background-image: url("../images/team/keyur-bw.png")
-      &.on
+      &:hover
         background-image: url("../images/team/keyur.png")
     &#chad
       background-image: url("../images/team/chad-bw.png")
-      &.on
+      &:hover
         background-image: url("../images/team/chad.png")
     &#blog a
       display: block
@@ -502,7 +518,7 @@ footer h2.title
 
 
 a.signup
-  color: #FFF
+  color: #fff
   font-size: 24px
   text-decoration: none
   text-align: center
@@ -518,7 +534,7 @@ a.signup
   background: -o-linear-gradient(top, rgba(0,162,255,1) 0%,rgba(0,112,255,1) 100%)
   background: -ms-linear-gradient(top, rgba(0,162,255,1) 0%,rgba(0,112,255,1) 100%)
   background: linear-gradient(to bottom, rgba(0,162,255,1) 0%,rgba(0,112,255,1) 100%)
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a2ff', endColorstr='#0070ff',GradientType=0 )
+  filter: progid:dximagetransform.microsoft.gradient( startcolorstr='#00a2ff', endcolorstr='#0070ff',gradienttype=0 )
   -webkit-border-radius: 50px
   -moz-border-radius: 50px
   border-radius: 50px
@@ -539,6 +555,193 @@ a.signup
  * Media Queries
  * ==========================================================================
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+  #social-contact li a
+    background-image: url('../images/layout/social-contact@2x.png')
+    background-size: 32px 32px
+    width: 64px
+    height: 64px
+@media screen and (max-width: 1024px)
+  .wrapper
+    text-align: center
+    width: 100%
+    padding: 20px
+    box-sizing: border-box
+  .header-container
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+  header.wrapper
+    position: relative
+    height: 69px
+    padding: 0
+  footer.wrapper
+    padding: 20px
+  .mobile-menu-trigger
+    display: block
+    background: url('../images/layout/header-mobile-menu.png') no-repeat center center
+    cursor: pointer
+    text-indent: -9999px
+    width: 69px
+    height: 69px
+    border-right: 1px solid #4c9300
+    position: absolute
+    top: 0
+    left: 0
+  body[data-menu-position="open"]
+    .mobile-menu-trigger
+      background: url('../images/layout/header-mobile-menu-open.png') no-repeat center center
+  #desk-menu
+    display: none
+  #logo
+    float: none
+    margin: 10px auto 0
+
+  #top
+    .wrapper
+      height: auto
+    #unlock
+      position: static
+      width: 100%
+      margin-top: 0
+      .title
+        text-align: center
+      p
+        margin-top: 0
+        width: 100%
+      .signup
+        margin: 0 auto 20px
+      #mobile-phones
+        display: block
+        margin: 0 auto
+        max-width: 100%
+      span
+        display: none
+      #rating
+        display: none
+    #phones
+      display: none
+  #tools
+    .wrapper
+      padding: 0
+    .tool
+      float: none
+      width: 100%
+      text-align: center
+      margin-bottom: 40px
+      box-sizing: border-box
+      padding: 20px
+      &.right
+        margin-left: 0
+      .icon
+        float: none
+        margin: 0 auto
+      .tool-desc
+        float: none
+        width: 100%
+  #sdk
+    img
+      display: none
+    #uprise
+      float: none
+      width: 100%
+      border-right: none
+      border-bottom: 1px solid #dfe3e7
+      padding-bottom: 20px
+      h3
+        text-align: center
+      p
+        width: 100%
+    #offerwalls
+      float: none
+      width: 100%
+      h3
+        padding: 0
+        text-align: center
+      p
+        width: 100%
+        padding: 0
+  #team
+    .locations
+      width: 75%
+    .team-members
+      display: none
+  footer
+    h2.title
+      text-align: center
+    #sitemap,
+    #contact-hours,
+    #social-contact
+      float: none
+      width: 100%
+      height: auto
+    #sitemap
+      width: 640px
+      margin: 0 auto
+    #social-contact
+      text-align: center
+      ul
+        margin: 0
+        padding: 0
+        overflow: hidden
+        li
+          width: 32px
+          overflow: hidden
+          display: inline-block
+  .slider-nav
+    display: none
+  #team
+    min-height: 680px
+  footer
+    #sitemap
+      width: 100%
+    #footer-nav
+      li
+        width: 100%
+      float: none
+@media screen and (max-width: 480px)
+  #top.container
+    padding-top: 20px
+    .wrapper
+      padding: 0
+      p
+        box-sizing: border-box
+        padding: 20px
+    #unlock .title
+      font-size: 40px
+
+  #tools, #sdk
+    h2
+      font-size: 40px
+
+  #team
+    .wrapper
+      padding: 0
+    h2.multi-line
+      font-size: 28px
+      line-height: 32px
+      margin-bottom: 20px
+      br
+        display: none
+  footer
+    position: relative
+    h2.title
+      margin-top: 20px
+      text-align: left
+    #contact-hours
+      margin-top: 20px
+      text-align: left
+    #footer-nav
+      li
+        width: 100%
+        float: none
+        text-align: left
+
+  #ada
+    position: absolute
+    top: 40px
+    right: 40px
+@media screen and (max-width: 320px)
 
 /* ==========================================================================
  * Helper classes

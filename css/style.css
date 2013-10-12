@@ -424,9 +424,25 @@ body {
 /* ==============
  *  MOBILE: Menu
  * ============== */
-/* ==============
- *  MOBILE: Main
- * ============== */
+#jPanelMenu-menu {
+  background: url("../images/layout/mobile-menu-bg.png") repeat-y top right; }
+  #jPanelMenu-menu ul {
+    margin: 0;
+    padding: 0; }
+    #jPanelMenu-menu ul li {
+      cursor: pointer; }
+      #jPanelMenu-menu ul li a {
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        color: #b2b5b6;
+        text-decoration: none;
+        padding-left: 40px;
+        border-bottom: 1px solid #212122; }
+        #jPanelMenu-menu ul li a:hover {
+          color: #00a1ff;
+          background: #212122; }
+
 .main {
   padding: 30px 0; }
   .main article h1 {
@@ -463,16 +479,19 @@ h3.sub-title {
   float: left;
   margin: 10px 0; }
 
-nav {
+#mobile-menu, .mobile-menu-trigger {
+  display: none; }
+
+#desk-menu {
   float: right; }
-  nav ul {
+  #desk-menu ul {
     width: 92px;
     height: 39px;
     padding: 0;
     margin: 13px 0 0 0; }
-    nav ul #login {
+    #desk-menu ul #login {
       text-align: center; }
-      nav ul #login a {
+      #desk-menu ul #login a {
         display: block;
         text-decoration: none;
         color: white;
@@ -487,7 +506,7 @@ nav {
         -moz-box-shadow: inset 1px 4px 0px -3px #b2d776;
         -webkit-box-shadow: inset 1px 4px 0px -3px #b2d776;
         box-shadow: inner 1px 4px 0px 1px #b2d776; }
-        nav ul #login a:hover {
+        #desk-menu ul #login a:hover {
           background: rgba(255, 255, 255, 0.1); }
 
 #top {
@@ -500,6 +519,8 @@ nav {
   position: absolute;
   width: 652px;
   margin-top: 133px; }
+  #unlock #mobile-phones {
+    display: none; }
   #unlock .title {
     text-align: left;
     font-size: 62px; }
@@ -520,7 +541,6 @@ nav {
         color: #97999b; }
 
 #phones {
-  display: none;
   position: absolute;
   right: -30px;
   width: 531px;
@@ -723,27 +743,27 @@ nav {
           background-image: url("../images/layout/team-linkedin.png"); }
     .team-members li#sam {
       background-image: url("../images/team/sam-bw.png"); }
-      .team-members li#sam.on {
+      .team-members li#sam:hover {
         background-image: url("../images/team/sam.png"); }
     .team-members li#shay {
       background-image: url("../images/team/shay-bw.png"); }
-      .team-members li#shay.on {
+      .team-members li#shay:hover {
         background-image: url("../images/team/shay.png"); }
     .team-members li#ryan {
       background-image: url("../images/team/ryan-bw.png"); }
-      .team-members li#ryan.on {
+      .team-members li#ryan:hover {
         background-image: url("../images/team/ryan.png"); }
     .team-members li#nik {
       background-image: url("../images/team/nik-bw.png"); }
-      .team-members li#nik.on {
+      .team-members li#nik:hover {
         background-image: url("../images/team/nik.png"); }
     .team-members li#keyur {
       background-image: url("../images/team/keyur-bw.png"); }
-      .team-members li#keyur.on {
+      .team-members li#keyur:hover {
         background-image: url("../images/team/keyur.png"); }
     .team-members li#chad {
       background-image: url("../images/team/chad-bw.png"); }
-      .team-members li#chad.on {
+      .team-members li#chad:hover {
         background-image: url("../images/team/chad.png"); }
     .team-members li#blog a {
       display: block;
@@ -869,7 +889,7 @@ a.signup {
   background: -o-linear-gradient(top, #00a2ff 0%, #0070ff 100%);
   background: -ms-linear-gradient(top, #00a2ff 0%, #0070ff 100%);
   background: linear-gradient(to bottom, #00a2ff 0%, #0070ff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00a2ff', endColorstr='#0070ff',GradientType=0 );
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='#00a2ff', endcolorstr='#0070ff',gradienttype=0 );
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
@@ -890,6 +910,197 @@ a.signup {
 /* ==========================================================================
  * Media Queries
  * ========================================================================== */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  #social-contact li a {
+    background-image: url("../images/layout/social-contact@2x.png");
+    background-size: 32px 32px;
+    width: 64px;
+    height: 64px; } }
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; }
+
+  .header-container {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+
+  header.wrapper {
+    position: relative;
+    height: 69px;
+    padding: 0; }
+
+  footer.wrapper {
+    padding: 20px; }
+
+  .mobile-menu-trigger {
+    display: block;
+    background: url("../images/layout/header-mobile-menu.png") no-repeat center center;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 69px;
+    height: 69px;
+    border-right: 1px solid #4c9300;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+  body[data-menu-position="open"] .mobile-menu-trigger {
+    background: url("../images/layout/header-mobile-menu-open.png") no-repeat center center; }
+
+  #desk-menu {
+    display: none; }
+
+  #logo {
+    float: none;
+    margin: 10px auto 0; }
+
+  #top .wrapper {
+    height: auto; }
+  #top #unlock {
+    position: static;
+    width: 100%;
+    margin-top: 0; }
+    #top #unlock .title {
+      text-align: center; }
+    #top #unlock p {
+      margin-top: 0;
+      width: 100%; }
+    #top #unlock .signup {
+      margin: 0 auto 20px; }
+    #top #unlock #mobile-phones {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%; }
+    #top #unlock span {
+      display: none; }
+    #top #unlock #rating {
+      display: none; }
+  #top #phones {
+    display: none; }
+
+  #tools .wrapper {
+    padding: 0; }
+  #tools .tool {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding: 20px; }
+    #tools .tool.right {
+      margin-left: 0; }
+    #tools .tool .icon {
+      float: none;
+      margin: 0 auto; }
+    #tools .tool .tool-desc {
+      float: none;
+      width: 100%; }
+
+  #sdk img {
+    display: none; }
+  #sdk #uprise {
+    float: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #dfe3e7;
+    padding-bottom: 20px; }
+    #sdk #uprise h3 {
+      text-align: center; }
+    #sdk #uprise p {
+      width: 100%; }
+  #sdk #offerwalls {
+    float: none;
+    width: 100%; }
+    #sdk #offerwalls h3 {
+      padding: 0;
+      text-align: center; }
+    #sdk #offerwalls p {
+      width: 100%;
+      padding: 0; }
+
+  #team .locations {
+    width: 75%; }
+  #team .team-members {
+    display: none; }
+
+  footer h2.title {
+    text-align: center; }
+  footer #sitemap,
+  footer #contact-hours,
+  footer #social-contact {
+    float: none;
+    width: 100%;
+    height: auto; }
+  footer #sitemap {
+    width: 640px;
+    margin: 0 auto; }
+  footer #social-contact {
+    text-align: center; }
+    footer #social-contact ul {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; }
+      footer #social-contact ul li {
+        width: 32px;
+        overflow: hidden;
+        display: inline-block; }
+
+  .slider-nav {
+    display: none; }
+
+  #team {
+    min-height: 680px; }
+
+  footer #sitemap {
+    width: 100%; }
+  footer #footer-nav {
+    float: none; }
+    footer #footer-nav li {
+      width: 100%; } }
+@media screen and (max-width: 480px) {
+  #top.container {
+    padding-top: 20px; }
+    #top.container .wrapper {
+      padding: 0; }
+      #top.container .wrapper p {
+        box-sizing: border-box;
+        padding: 20px; }
+    #top.container #unlock .title {
+      font-size: 40px; }
+
+  #tools h2, #sdk h2 {
+    font-size: 40px; }
+
+  #team .wrapper {
+    padding: 0; }
+  #team h2.multi-line {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 20px; }
+    #team h2.multi-line br {
+      display: none; }
+
+  footer {
+    position: relative; }
+    footer h2.title {
+      margin-top: 20px;
+      text-align: left; }
+    footer #contact-hours {
+      margin-top: 20px;
+      text-align: left; }
+    footer #footer-nav li {
+      width: 100%;
+      float: none;
+      text-align: left; }
+
+  #ada {
+    position: absolute;
+    top: 40px;
+    right: 40px; } }
 /* ==========================================================================
  * Helper classes
  * ========================================================================== */

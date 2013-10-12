@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Everbadge</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -23,12 +23,24 @@
 
     <div class="header-container">
       <header class="wrapper clearfix">
-      <h1 id="logo">
-        <img src="" alt="" data-src="/images/layout/logo.png" data-alt="Everbadge" class="retina" />
-      </h1>
-        <nav>
+        <a class="mobile-menu-trigger">Menu</a>
+        <h1 id="logo">
+          <img src="" alt="" data-src="/images/layout/logo.png" data-alt="Everbadge" class="retina" />
+        </h1>
+        <nav id="desk-menu">
           <ul>
             <li id="login"><a href="#">Login</a></li>
+          </ul>
+        </nav>
+        <nav id="mobile-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Developers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </nav>
       </header>
@@ -39,10 +51,11 @@
           <div class="wrapper">
             <div id="unlock">
               <h2 class="title">Unlock New Revenue.</h2>
+              <img id="mobile-phones" src="images/layout/mobile-phone-group.png" alt="" />
               <p>
                 We provide leading monetization tools for mobile developers.
-                Sign up to make more money with your Android, iPhone
-                &amp; Windows Phone Apps.
+                <span>Sign up to make more money with your Android, iPhone
+                  &amp; Windows Phone Apps.</span>
               </p>
               <a class="signup button" href="#">Sign Up • Free</a>
               <div id="rating">
@@ -341,20 +354,9 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
     <script src="js/vendor/jquery.retinise.min.js"></script>
-    <script type="text/javascript">
-      $('.retina').retinise();
-    </script>
-
     <script src="js/vendor/jquery.slides.min.js"></script>
-    <script>
-      $(function(){
-        $("#slides").slidesjs({
-          width: 947,
-          height: 701,
-        });
-      });
-    </script>
-
+    <script src="js/vendor/jquery.jrespond.js"></script>
+    <script src="js/vendor/jquery.jpanelmenu.js"></script>
     <script src="js/global.js"></script>
 
     <script>
