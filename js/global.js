@@ -20,6 +20,12 @@ $(document).ready(function() {
     height: 701,
   });
 
+  $("#offers").slidesjs({
+    width: 900,
+    height: 250,
+    navigation: false
+  });
+
   var jRes = jRespond([
     {
         label: 'small',

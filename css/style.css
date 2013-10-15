@@ -421,6 +421,128 @@ body {
   -moz-box-shadow: 0 1px 10px #aaaaaa;
   box-shadow: 0 1px 10px #aaaaaa; }
 
+.publisher-registration {
+  background: #f0f2f4; }
+  .publisher-registration #top .container {
+    padding-top: 60px; }
+  .publisher-registration #top .wrapper {
+    height: auto; }
+  .publisher-registration #top h2.title {
+    font-size: 62px;
+    margin-bottom: 30px; }
+  .publisher-registration #top .sub {
+    color: #616263;
+    font-weight: normal;
+    font-size: 22px;
+    text-align: center; }
+  .publisher-registration .form-container form {
+    margin-bottom: 40px; }
+  .publisher-registration .form-container .form-left, .publisher-registration .form-container .form-right {
+    width: 448px; }
+    .publisher-registration .form-container .form-left h4, .publisher-registration .form-container .form-right h4 {
+      color: #417e00;
+      font-size: 26px;
+      font-weight: normal;
+      border-bottom: 1px solid #dfe3e7;
+      padding-bottom: 20px; }
+    .publisher-registration .form-container .form-left .highlight, .publisher-registration .form-container .form-right .highlight {
+      color: #0061cf; }
+    .publisher-registration .form-container .form-left div, .publisher-registration .form-container .form-right div {
+      overflow: hidden;
+      margin-bottom: 30px; }
+      .publisher-registration .form-container .form-left div label, .publisher-registration .form-container .form-right div label {
+        float: left;
+        line-height: 34px;
+        width: 115px;
+        padding-right: 30px;
+        text-align: right;
+        padding: 1px 0; }
+      .publisher-registration .form-container .form-left div input, .publisher-registration .form-container .form-right div input {
+        border: 1px solid #dedede;
+        width: 255px;
+        height: 34px;
+        padding: 0 10px;
+        float: right; }
+        .publisher-registration .form-container .form-left div input#address2, .publisher-registration .form-container .form-right div input#address2 {
+          margin-top: 10px; }
+      .publisher-registration .form-container .form-left div.short, .publisher-registration .form-container .form-right div.short {
+        margin-bottom: 10px; }
+      .publisher-registration .form-container .form-left div select.country, .publisher-registration .form-container .form-right div select.country {
+        width: 295px; }
+      .publisher-registration .form-container .form-left div .select-spacer, .publisher-registration .form-container .form-right div .select-spacer {
+        line-height: 34px;
+        width: 295px;
+        float: right;
+        padding: 1px; }
+  .publisher-registration .form-container .form-left {
+    float: left; }
+  .publisher-registration .form-container .form-right {
+    float: right; }
+  .publisher-registration .form-container .form-bottom {
+    clear: both;
+    overflow: hidden; }
+    .publisher-registration .form-container .form-bottom div {
+      float: left;
+      line-height: 49px;
+      margin-right: 40px;
+      margin-left: 650px; }
+    .publisher-registration .form-container .form-bottom .submit {
+      width: 160px;
+      height: 49px;
+      line-height: 49px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      float: left; }
+    .publisher-registration .form-container .form-bottom a {
+      color: #0061cf;
+      text-decoration: none; }
+      .publisher-registration .form-container .form-bottom a:hover {
+        text-decoration: underline; }
+  .publisher-registration .offers-container {
+    border-bottom: 1px solid gainsboro; }
+    .publisher-registration .offers-container #offers {
+      margin: 0 25px; }
+      .publisher-registration .offers-container #offers li img {
+        margin: 0 20px; }
+      .publisher-registration .offers-container #offers .slidesjs-pagination {
+        margin: 10px 0;
+        height: 6px;
+        text-align: center; }
+        .publisher-registration .offers-container #offers .slidesjs-pagination li {
+          display: inline-block;
+          margin: 0 10px; }
+          .publisher-registration .offers-container #offers .slidesjs-pagination li a {
+            display: block;
+            background: url("../images/layout/slider-dot-sm.png") no-repeat;
+            width: 6px;
+            height: 6px;
+            text-indent: -9999px; }
+            .publisher-registration .offers-container #offers .slidesjs-pagination li a.active {
+              background-position: -6px 0; }
+    .publisher-registration .offers-container .offers-title {
+      font-family: "museo-sans-rounded", sans-serif;
+      color: #417e00;
+      margin-bottom: 40px; }
+      .publisher-registration .offers-container .offers-title span {
+        display: block;
+        text-align: center;
+        font-weight: bold; }
+      .publisher-registration .offers-container .offers-title .number {
+        background: url("../images/layout/number-rails.png") no-repeat center;
+        font-size: 64px;
+        line-height: 64px; }
+      .publisher-registration .offers-container .offers-title .mobile-offers {
+        font-size: 16px;
+        margin: 0 auto; }
+    .publisher-registration .offers-container .wrapper {
+      padding: 50px 0 85px; }
+    .publisher-registration .offers-container ul {
+      margin: 0;
+      padding: 0; }
+  .publisher-registration .footer-container, .publisher-registration .offers-container {
+    background: white; }
+
 /* ==============
  *  MOBILE: Menu
  * ============== */
@@ -872,7 +994,7 @@ footer h2.title {
   #credits #ada {
     float: right; }
 
-a.signup {
+.button {
   color: white;
   font-size: 24px;
   text-decoration: none;
@@ -896,7 +1018,7 @@ a.signup {
   -moz-box-shadow: inset 1px 4px 0px -3px #66bfef;
   -webkit-box-shadow: inset 1px 4px 0px -3px #66bfef;
   box-shadow: inner 1px 4px 0px 1px #66bfef; }
-  a.signup:hover {
+  .button:hover {
     cursor: pointer;
     background: #0093e5;
     background: -moz-linear-gradient(top, #0093e5 0%, #005dd1 100%);
@@ -1060,7 +1182,34 @@ a.signup {
   footer #footer-nav {
     float: none; }
     footer #footer-nav li {
-      width: 100%; } }
+      width: 100%; }
+
+  .publisher-registration #top.container .wrapper {
+    padding: 0 20px;
+    text-align: left; }
+  .publisher-registration .form-container .form-left, .publisher-registration .form-container .form-right {
+    float: none;
+    width: 100%; }
+    .publisher-registration .form-container .form-left div, .publisher-registration .form-container .form-right div {
+      width: 100%; }
+      .publisher-registration .form-container .form-left div label, .publisher-registration .form-container .form-right div label {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left; }
+      .publisher-registration .form-container .form-left div input, .publisher-registration .form-container .form-right div input {
+        width: 90%;
+        float: none; }
+      .publisher-registration .form-container .form-left div select, .publisher-registration .form-container .form-left div select.country, .publisher-registration .form-container .form-right div select, .publisher-registration .form-container .form-right div select.country {
+        width: 90%; }
+      .publisher-registration .form-container .form-left div .select-spacer, .publisher-registration .form-container .form-right div .select-spacer {
+        float: none; }
+  .publisher-registration .form-container .form-bottom div {
+    width: 100%;
+    float: none;
+    margin: 0 0 20px; }
+  .publisher-registration .offers-container {
+    display: none; } }
 @media screen and (max-width: 480px) {
   #top.container {
     padding-top: 20px; }
@@ -1100,7 +1249,16 @@ a.signup {
   #ada {
     position: absolute;
     top: 40px;
-    right: 40px; } }
+    right: 40px; }
+
+  .publisher-registration #top h2.title {
+    font-size: 36px;
+    margin-bottom: 0; }
+  .publisher-registration #top .sub {
+    font-size: 12px;
+    margin-top: 0; }
+  .publisher-registration #top .form-left h4, .publisher-registration #top .form-right h4 {
+    font-size: 18px; } }
 /* ==========================================================================
  * Helper classes
  * ========================================================================== */

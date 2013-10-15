@@ -63,6 +63,133 @@ body
   box-shadow: 0 1px 10px #aaa
   .wrapper
 
+.publisher-registration
+  background: #f0f2f4
+  #top
+    .container
+      padding-top: 60px
+    .wrapper
+      height: auto
+    h2.title
+      font-size: 62px
+      margin-bottom: 30px
+    .sub
+      color: #616263
+      font-weight: normal
+      font-size: 22px
+      text-align: center
+  .form-container
+    form
+      margin-bottom: 40px
+    .form-left, .form-right
+      width: 448px
+      h4
+        color: #417e00
+        font-size: 26px
+        font-weight: normal
+        border-bottom: 1px solid #dfe3e7
+        padding-bottom: 20px
+      .highlight
+        color: #0061cf
+      div
+        overflow: hidden
+        margin-bottom: 30px
+        label
+          float: left
+          line-height: 34px
+          width: 115px
+          padding-right: 30px
+          text-align: right
+          padding: 1px 0
+        input
+          border: 1px solid #dedede
+          width: 255px
+          height: 34px
+          padding: 0 10px
+          float: right
+          &#address2
+            margin-top: 10px
+        &.short
+          margin-bottom: 10px
+        select
+          &.country
+            width: 295px
+        .select-spacer
+          line-height: 34px
+          width: 295px
+          float: right
+          padding: 1px
+    .form-left
+      float: left
+    .form-right
+      float: right
+    .form-bottom
+      clear: both
+      overflow: hidden
+      div
+        float: left
+        line-height: 49px
+        margin-right: 40px
+        margin-left: 650px
+      .submit
+        width: 160px
+        height: 49px
+        line-height: 49px
+        -webkit-border-radius: 5px
+        -moz-border-radius: 5px
+        border-radius: 5px
+        float: left
+      a
+        color: #0061cf
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+  .offers-container
+    border-bottom: 1px solid #dcdcdc
+    #offers
+      margin: 0 25px
+      li
+        img
+          margin: 0 20px
+      .slidesjs-pagination
+        margin: 10px 0
+        height: 6px
+        text-align: center
+        li
+          display: inline-block
+          margin: 0 10px
+          a
+            display: block
+            background: url("../images/layout/slider-dot-sm.png") no-repeat
+            width: 6px
+            height: 6px
+            text-indent: -9999px
+            &.active
+              background-position: -6px 0
+    .offers-title
+      font-family: "museo-sans-rounded",sans-serif
+      color: #417e00
+      margin-bottom: 40px
+      span
+        display: block
+        text-align: center
+        font-weight: bold
+      .number
+        background: url('../images/layout/number-rails.png') no-repeat center
+        font-size: 64px
+        line-height: 64px
+      .mobile-offers
+        font-size: 16px
+        margin: 0 auto
+    .wrapper
+      padding: 50px 0 85px
+    ul
+      margin: 0
+      padding: 0
+  .footer-container, .offers-container
+    background: #FFF
+
 /* ==============
  *  MOBILE: Menu
  * ==============
@@ -517,7 +644,7 @@ footer h2.title
     float: right
 
 
-a.signup
+.button
   color: #fff
   font-size: 24px
   text-decoration: none
@@ -699,6 +826,36 @@ a.signup
       li
         width: 100%
       float: none
+  .publisher-registration
+    #top.container
+      .wrapper
+        padding: 0 20px
+        text-align: left
+    .form-container
+      .form-left, .form-right
+        float: none
+        width: 100%
+        div
+          width: 100%
+          label
+            float: none
+            display: block
+            width: 100%
+            text-align: left
+          input
+            width: 90%
+            float: none
+          select, select.country
+            width: 90%
+          .select-spacer
+            float: none
+      .form-bottom
+        div
+          width: 100%
+          float: none
+          margin: 0 0 20px
+    .offers-container
+      display: none
 @media screen and (max-width: 480px)
   #top.container
     padding-top: 20px
@@ -736,11 +893,21 @@ a.signup
         width: 100%
         float: none
         text-align: left
-
   #ada
     position: absolute
     top: 40px
     right: 40px
+
+  .publisher-registration
+    #top
+      h2.title
+        font-size: 36px
+        margin-bottom: 0
+      .sub
+        font-size: 12px
+        margin-top: 0
+      .form-left h4, .form-right h4
+        font-size: 18px
 @media screen and (max-width: 320px)
 
 /* ==========================================================================
