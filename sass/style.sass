@@ -190,12 +190,168 @@ body
   .footer-container, .offers-container
     background: #FFF
 
+.login
+  position: relative
+  background: url("../images/layout/bg-team.jpg") no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  min-height: 100%
+  .mobile-signup-button
+    display: none
+  .authbox
+    margin: 150px auto 0
+    background: rgba(255, 255, 255, 0.7)
+    width: 837px
+    height: 451px
+    overflow: hidden
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .1)
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .1)
+    .box-left
+      width: 418px
+      float: left
+      margin-top: 42px
+      #logo
+        float: none
+        margin: 0 auto
+      form
+        text-align: center
+      input, select, button
+        width: 255px
+        margin: 0 auto
+      select, button
+        width: 275px
+        margin: 31px 0
+      input
+        border: 1px solid #dedede
+        height: 34px
+        padding: 0 10px
+        &#email-address
+          margin-bottom: 10px
+      #login-submit
+        color: #FFF
+        border: 0
+        margin: 31px auto
+        width: 275px
+        height: 49px
+        line-height: 39px
+        font-size: 20px
+        -webkit-border-radius: 5px
+        -moz-border-radius: 5px
+        border-radius: 5px
+        background: rgb(76,76,76)
+        background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(17,17,17,1) 60%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%)
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(76,76,76,1)), color-stop(60%,rgba(17,17,17,1)), color-stop(91%,rgba(28,28,28,1)), color-stop(100%,rgba(19,19,19,1)))
+        background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(17,17,17,1) 60%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%)
+        background: -o-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(17,17,17,1) 60%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%)
+        background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(17,17,17,1) 60%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%)
+        background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(17,17,17,1) 60%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 )
+      .forgot-password
+        color: #000
+        font-size: 12px
+        margin-left: 72px
+    .box-right
+      width: 418px
+      height: 349px
+      margin-top: 50px
+      float: right
+      border-left: 1px solid #d7d7d7
+      #need-register, #sub
+        font-family: Arial
+        font-weight: normal
+        text-align: center
+        width: 327px
+        margin: 0 auto
+      #need-register
+        color: #00a1ff
+        font-size: 26px
+        margin-bottom: 10px
+        margin-top: 70px
+      #sub
+        color: #888a8c
+        font-size: 14px
+      .button
+        margin: 24px auto 0
+  .error-flash
+    position: relative
+    background: rgba(240, 17, 0, 0.7)
+    overflow: hidden
+    max-width: 437px
+    height: 41px
+    padding: 10px
+    margin: 0 auto
+    p
+      color: #FFF
+      padding: 0
+      margin: 10px 0 0 7px
+      text-align: center
+      font-size: 16px
+      max-width: 437px
+    .error-close
+      position: absolute
+      right: 7px
+      top: 7px
+      background: url("../images/layout/close-button.png") no-repeat center
+      text-indent: -9999px
+      width: 16px
+      height: 16px
+      margin: 17px 7px 0 0
+  header
+    display: none
+  #desk-menu
+    display: none
+  .footer-container
+    position: fixed
+    bottom: 0
+    background: rgba(113, 174, 33, 0.7)
+    height: 100px
+    width: 100%
+    footer
+      position: relative
+      padding: 0
+      width: 1080px
+      height: 100px
+      margin: 0 auto
+      overflow: hidden
+      .icon-group-left, .icon-group-right
+        position: absolute
+        top: 0
+        padding: 0
+        margin: 15px 0 0
+        li
+          display: inline-block
+      .icon-group-left
+        left: 0
+        li
+          margin-left: 10px
+      .icon-group-right
+        right: 0
+        li
+          margin-right: 10px
+      .offers
+        font-family: "museo-sans-rounded",sans-serif
+        color: #FFF
+        margin: 10px auto 0
+        span
+          display: block
+          text-align: center
+          font-weight: bold
+        .number
+          background: url('../images/layout/number-rails-white.png') no-repeat center
+          font-size: 64px
+          line-height: 64px
+        .mobile-offers
+          font-size: 16px
+          margin: 0 auto
 /* ==============
  *  MOBILE: Menu
  * ==============
-
+.jPanelMenu-panel
+  background: none !important
 #jPanelMenu-menu
-  background: url('../images/layout/mobile-menu-bg.png') repeat-y top right
+  background: #353536 url('../images/layout/mobile-menu-bg.png') repeat-y top right
   ul
     margin: 0
     padding: 0
@@ -464,7 +620,10 @@ h3
         margin-right: 62px
 
 #team
-  background: url("../images/layout/bg-team.jpg") no-repeat center center
+  background: url("../images/layout/bg-team.jpg") no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
   background-size: cover
   min-height: 1165px
 
@@ -633,7 +792,6 @@ footer h2.title
       &.linkedin
         background-position: 0 -96px
 
-
 #credits
   margin-bottom: 20px
   overflow: hidden
@@ -783,6 +941,8 @@ footer h2.title
       float: none
       width: 100%
       h3
+      .mobile-signup
+        display: none
         padding: 0
         text-align: center
       p
@@ -856,6 +1016,39 @@ footer h2.title
           margin: 0 0 20px
     .offers-container
       display: none
+
+  .login
+    header
+      display: block
+    .main-container
+      padding: 0 20px
+    .authbox
+      width: 100%
+      height: auto
+      margin: 0
+      #logo
+        display: none
+      .box-left
+        width: 100%
+        padding: 20px
+        margin: 0
+        box-sizing: border-box
+        form
+        input, select, button
+          width: 100%
+          box-sizing: border-box
+        #login-submit
+          width: 100%
+        .forgot-password
+          margin: 0
+      .box-right
+        display: none
+    .mobile-signup-button
+      display: block
+      margin: 40px auto
+    .footer-container
+      display: none
+
 @media screen and (max-width: 480px)
   #top.container
     padding-top: 20px
