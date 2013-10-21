@@ -61,7 +61,6 @@ body
   -webkit-box-shadow: 0 1px 10px #aaa
   -moz-box-shadow: 0 1px 10px #aaa
   box-shadow: 0 1px 10px #aaa
-  .wrapper
 
 .publisher-registration
   background: #f0f2f4
@@ -345,9 +344,7 @@ body
         .mobile-offers
           font-size: 16px
           margin: 0 auto
-/* ==============
- *  MOBILE: Menu
- * ==============
+
 .jPanelMenu-panel
   background: none !important
 #jPanelMenu-menu
@@ -508,34 +505,15 @@ h3
   text-align: center
   .slider-nav
     height: 0
-    #prev, #next
-      display: block
-      width: 25px
-      height: 42px
-    #prev
-      background: url("../images/layout/slider-prev.png") no-repeat
-      position: absolute
-      left: -40px
-      bottom: 400px
-      &:hover
-        background-position: 0px -42px
-    #next
-      background: url("../images/layout/slider-next.png") no-repeat
-      position: absolute
-      right: -40px
-      bottom: 400px
-      &:hover
-        background-position: 0px -42px
   .slide
     margin-bottom: -26px
     .title
       margin-bottom: 14px
     p
       margin-bottom: 2em
-    .slidesjs-previous, .slidesjs-next
-      display: none
     .slidesjs-pagination
       margin: 10px 0
+      padding: 0
       height: 6px
       li
         display: inline-block
@@ -548,6 +526,28 @@ h3
           text-indent: -9999px
           &.active
             background-position: -6px 0
+
+.prev, .next
+  display: block
+  width: 25px
+  height: 42px
+.prev
+  background-image: url("../images/layout/slider-prev.png")
+  position: absolute
+  left: -40px
+  bottom: 400px
+  &:hover
+    background-position: 0px -42px
+.next
+  background-image: url("../images/layout/slider-next.png")
+  position: absolute
+  right: -40px
+  bottom: 400px
+  &:hover
+    background-position: 0px -42px
+
+.slidesjs-previous, .slidesjs-next
+  display: none
 
 #sdk
   background: #eff1f3
@@ -627,6 +627,49 @@ h3
   background-size: cover
   min-height: 1165px
 
+.team-members-mobile-container
+  padding: 0 40px
+  box-sizing: border-box
+  position: relative
+  .team-members-nav
+    .prev
+      background-image: url("../images/layout/team-slider-prev.png")
+      background-size: cover
+      top: 25%
+      left: 15px
+    .next
+      background-image: url("../images/layout/team-slider-next.png")
+      background-size: cover
+      top: 25%
+      right: 15px
+
+.team-members-mobile
+  display: none
+  list-style: none
+  margin: 0
+  padding: 0
+  max-height: 600px
+  img
+    width: 100%
+    max-width: 361px
+  .team-member-name,
+  .team-member-role
+    display: block
+    width: auto
+    margin: 1em 0 0
+    font-size: 54px
+  .team-member-role
+    font-size: 34px
+  .team-social
+    display: block
+    position: static
+    width: 80px
+    height: 40px
+    margin: 20px auto 0
+    a
+      display: block
+      float: left
+
 .team-members
   margin: 0
   padding: 0
@@ -649,24 +692,6 @@ h3
         display: block
       > .team-social
         display: block
-    .team-social
-      display: none
-      position: absolute
-      right: 0
-      top: 37px
-      width: 40px
-      a
-        display: block
-        width: 40px
-        height: 40px
-        &.twitter
-          background-image: url("../images/layout/team-twitter.png")
-        &.facebook
-          background-image: url("../images/layout/team-facebook.png")
-        &.dribbble
-          background-image: url("../images/layout/team-dribbble.png")
-        &.linkedin
-          background-image: url("../images/layout/team-linkedin.png")
     &#sam
       background-image: url("../images/team/sam-bw.png")
       &:hover
@@ -696,6 +721,25 @@ h3
       width: 160px
       height: 156px
       background: url("../images/layout/blog.png") no-repeat 17px 17px
+
+.team-social
+  display: none
+  position: absolute
+  right: 0
+  top: 37px
+  width: 40px
+  a
+    display: block
+    width: 40px
+    height: 40px
+    &.twitter
+      background-image: url("../images/layout/team-twitter.png")
+    &.facebook
+      background-image: url("../images/layout/team-facebook.png")
+    &.dribbble
+      background-image: url("../images/layout/team-dribbble.png")
+    &.linkedin
+      background-image: url("../images/layout/team-linkedin.png")
 
 .team-member-name,
 .team-member-role
@@ -840,13 +884,38 @@ footer h2.title
  * Media Queries
  * ==========================================================================
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
-  #social-contact li a
-    background-image: url('../images/layout/social-contact@2x.png')
-    background-size: 32px 32px
-    width: 64px
-    height: 64px
+
 @media screen and (max-width: 1024px)
+  #logos
+    ul
+      max-width: 700px
+      text-align: center
+      margin: 0 auto
+      li
+        float: none
+        display: inline-block
+  #social-contact ul
+    li
+      width: 64px
+      text-indent: -9999px
+      a
+        background-size: 64px
+        width: 64px
+        height: 64px
+        &.email
+          background-image: url('../images/layout/contact-email.png')
+        &.facebook
+          background-image: url('../images/layout/contact-facebook.png')
+          background-position: 0
+        &.twitter
+          background-image: url('../images/layout/contact-twitter.png')
+          background-position: 0
+        &.linkedin
+          background-image: url('../images/layout/contact-linkedin.png')
+          background-position: 0
+
+
+
   .wrapper
     text-align: center
     width: 100%
@@ -941,18 +1010,19 @@ footer h2.title
       float: none
       width: 100%
       h3
-      .mobile-signup
-        display: none
-        padding: 0
         text-align: center
+        padding: 0
       p
         width: 100%
         padding: 0
+        text-align: center
   #team
     .locations
       width: 75%
     .team-members
       display: none
+    .team-members-mobile
+      display: block
   footer
     h2.title
       text-align: center
@@ -972,7 +1042,6 @@ footer h2.title
         padding: 0
         overflow: hidden
         li
-          width: 32px
           overflow: hidden
           display: inline-block
   .slider-nav
@@ -1033,7 +1102,6 @@ footer h2.title
         padding: 20px
         margin: 0
         box-sizing: border-box
-        form
         input, select, button
           width: 100%
           box-sizing: border-box
@@ -1050,6 +1118,12 @@ footer h2.title
       display: none
 
 @media screen and (max-width: 480px)
+  #logos
+    ul
+      li
+        margin: 0 !important
+        display: block
+
   #top.container
     padding-top: 20px
     .wrapper
@@ -1065,6 +1139,12 @@ footer h2.title
       font-size: 40px
 
   #team
+    .team-members-mobile
+      .team-member-name,
+      .team-member-role
+        font-size: 27px
+      .team-member-role
+        font-size: 17px
     .wrapper
       padding: 0
     h2.multi-line
@@ -1103,6 +1183,35 @@ footer h2.title
         font-size: 18px
 @media screen and (max-width: 320px)
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+  #team
+    .team-members-mobile
+      img
+        width: 50%
+  #logos
+    ul
+      width: 100%
+      text-align: center
+      li
+        float: none
+        display: inline-block
+        width: 30%
+        img
+          width: 100%
+  #slider
+    .slide
+      #slides
+        background: #eff1f3
+        .slidesjs-pagination
+          height: 18px
+          padding-top: 10px
+          li
+            a
+              background: url("../images/layout/slider-dot-lg.png") no-repeat
+              width: 18px
+              height: 18px
+              &.active
+                background-position: -18px 0
 /* ==========================================================================
  * Helper classes
  * ==========================================================================

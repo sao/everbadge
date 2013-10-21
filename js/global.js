@@ -27,7 +27,7 @@ $(document).ready(function() {
     phones.animate({top:'+=10'}, 1000);
     phones.animate({top:'-=10'}, 1000, animatePhone);
   }
-  // $(animatePhone);
+  $(animatePhone);
 
   $("#slides").slidesjs({
     width: 947,
@@ -38,6 +38,12 @@ $(document).ready(function() {
     width: 900,
     height: 250,
     navigation: false
+  });
+
+  $(".team-members-mobile").slidesjs({
+    width: 640,
+    height: 800,
+    pagination: false,
   });
 
   var jRes = jRespond([
@@ -56,22 +62,32 @@ $(document).ready(function() {
     breakpoint: 'small',
     enter: function() {
       jPM.on();
-      // phones.stop(true, false);
+      phones.stop(true, false);
     },
     exit: function() {
       jPM.off();
-      // animatePhone();
+      animatePhone();
     }
   });
 
   /** custom slider navs **/
-  $('.slider-nav a#prev').click(function(e) {
+  $('.slider-nav a.prev').click(function(e) {
     e.preventDefault();
-    $('.slidesjs-previous').trigger('click');
+    $('#slider .slidesjs-previous').trigger('click');
   });
 
-  $('.slider-nav a#next').click(function(e) {
+  $('.slider-nav a.next').click(function(e) {
     e.preventDefault();
-    $('.slidesjs-next').trigger('click');
+    $('#slider .slidesjs-next').trigger('click');
+  });
+
+  $('.team-members-nav a.prev').click(function(e) {
+    e.preventDefault();
+    $('.team-members-mobile .slidesjs-previous').trigger('click');
+  });
+
+  $('.team-members-nav a.next').click(function(e) {
+    e.preventDefault();
+    $('.team-members-mobile .slidesjs-next').trigger('click');
   });
 })

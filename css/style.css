@@ -699,9 +699,6 @@ body {
           font-size: 16px;
           margin: 0 auto; }
 
-/* ==============
- *  MOBILE: Menu
- * ============== */
 .jPanelMenu-panel {
   background: none !important; }
 
@@ -867,34 +864,15 @@ h3.sub-title {
   text-align: center; }
   #slider .slider-nav {
     height: 0; }
-    #slider .slider-nav #prev, #slider .slider-nav #next {
-      display: block;
-      width: 25px;
-      height: 42px; }
-    #slider .slider-nav #prev {
-      background: url("../images/layout/slider-prev.png") no-repeat;
-      position: absolute;
-      left: -40px;
-      bottom: 400px; }
-      #slider .slider-nav #prev:hover {
-        background-position: 0px -42px; }
-    #slider .slider-nav #next {
-      background: url("../images/layout/slider-next.png") no-repeat;
-      position: absolute;
-      right: -40px;
-      bottom: 400px; }
-      #slider .slider-nav #next:hover {
-        background-position: 0px -42px; }
   #slider .slide {
     margin-bottom: -26px; }
     #slider .slide .title {
       margin-bottom: 14px; }
     #slider .slide p {
       margin-bottom: 2em; }
-    #slider .slide .slidesjs-previous, #slider .slide .slidesjs-next {
-      display: none; }
     #slider .slide .slidesjs-pagination {
       margin: 10px 0;
+      padding: 0;
       height: 6px; }
       #slider .slide .slidesjs-pagination li {
         display: inline-block;
@@ -907,6 +885,30 @@ h3.sub-title {
           text-indent: -9999px; }
           #slider .slide .slidesjs-pagination li a.active {
             background-position: -6px 0; }
+
+.prev, .next {
+  display: block;
+  width: 25px;
+  height: 42px; }
+
+.prev {
+  background-image: url("../images/layout/slider-prev.png");
+  position: absolute;
+  left: -40px;
+  bottom: 400px; }
+  .prev:hover {
+    background-position: 0px -42px; }
+
+.next {
+  background-image: url("../images/layout/slider-next.png");
+  position: absolute;
+  right: -40px;
+  bottom: 400px; }
+  .next:hover {
+    background-position: 0px -42px; }
+
+.slidesjs-previous, .slidesjs-next {
+  display: none; }
 
 #sdk {
   background: #eff1f3;
@@ -986,6 +988,48 @@ h3.sub-title {
   background-size: cover;
   min-height: 1165px; }
 
+.team-members-mobile-container {
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: relative; }
+  .team-members-mobile-container .team-members-nav .prev {
+    background-image: url("../images/layout/team-slider-prev.png");
+    background-size: cover;
+    top: 25%;
+    left: 15px; }
+  .team-members-mobile-container .team-members-nav .next {
+    background-image: url("../images/layout/team-slider-next.png");
+    background-size: cover;
+    top: 25%;
+    right: 15px; }
+
+.team-members-mobile {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 600px; }
+  .team-members-mobile img {
+    width: 100%;
+    max-width: 361px; }
+  .team-members-mobile .team-member-name,
+  .team-members-mobile .team-member-role {
+    display: block;
+    width: auto;
+    margin: 1em 0 0;
+    font-size: 54px; }
+  .team-members-mobile .team-member-role {
+    font-size: 34px; }
+  .team-members-mobile .team-social {
+    display: block;
+    position: static;
+    width: 80px;
+    height: 40px;
+    margin: 20px auto 0; }
+    .team-members-mobile .team-social a {
+      display: block;
+      float: left; }
+
 .team-members {
   margin: 0;
   padding: 0;
@@ -1007,24 +1051,6 @@ h3.sub-title {
         display: block; }
       .team-members li:hover > .team-social {
         display: block; }
-    .team-members li .team-social {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 37px;
-      width: 40px; }
-      .team-members li .team-social a {
-        display: block;
-        width: 40px;
-        height: 40px; }
-        .team-members li .team-social a.twitter {
-          background-image: url("../images/layout/team-twitter.png"); }
-        .team-members li .team-social a.facebook {
-          background-image: url("../images/layout/team-facebook.png"); }
-        .team-members li .team-social a.dribbble {
-          background-image: url("../images/layout/team-dribbble.png"); }
-        .team-members li .team-social a.linkedin {
-          background-image: url("../images/layout/team-linkedin.png"); }
     .team-members li#sam {
       background-image: url("../images/team/sam-bw.png"); }
       .team-members li#sam:hover {
@@ -1054,6 +1080,25 @@ h3.sub-title {
       width: 160px;
       height: 156px;
       background: url("../images/layout/blog.png") no-repeat 17px 17px; }
+
+.team-social {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 37px;
+  width: 40px; }
+  .team-social a {
+    display: block;
+    width: 40px;
+    height: 40px; }
+    .team-social a.twitter {
+      background-image: url("../images/layout/team-twitter.png"); }
+    .team-social a.facebook {
+      background-image: url("../images/layout/team-facebook.png"); }
+    .team-social a.dribbble {
+      background-image: url("../images/layout/team-dribbble.png"); }
+    .team-social a.linkedin {
+      background-image: url("../images/layout/team-linkedin.png"); }
 
 .team-member-name,
 .team-member-role {
@@ -1194,13 +1239,34 @@ footer h2.title {
 /* ==========================================================================
  * Media Queries
  * ========================================================================== */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  #social-contact li a {
-    background-image: url("../images/layout/social-contact@2x.png");
-    background-size: 32px 32px;
-    width: 64px;
-    height: 64px; } }
 @media screen and (max-width: 1024px) {
+  #logos ul {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto; }
+    #logos ul li {
+      float: none;
+      display: inline-block; }
+
+  #social-contact ul li {
+    width: 64px;
+    text-indent: -9999px; }
+    #social-contact ul li a {
+      background-size: 64px;
+      width: 64px;
+      height: 64px; }
+      #social-contact ul li a.email {
+        background-image: url("../images/layout/contact-email.png"); }
+      #social-contact ul li a.facebook {
+        background-image: url("../images/layout/contact-facebook.png");
+        background-position: 0; }
+      #social-contact ul li a.twitter {
+        background-image: url("../images/layout/contact-twitter.png");
+        background-position: 0; }
+      #social-contact ul li a.linkedin {
+        background-image: url("../images/layout/contact-linkedin.png");
+        background-position: 0; }
+
   .wrapper {
     text-align: center;
     width: 100%;
@@ -1299,18 +1365,20 @@ footer h2.title {
   #sdk #offerwalls {
     float: none;
     width: 100%; }
-    #sdk #offerwalls .mobile-signup {
-      display: none;
-      padding: 0;
-      text-align: center; }
+    #sdk #offerwalls h3 {
+      text-align: center;
+      padding: 0; }
     #sdk #offerwalls p {
       width: 100%;
-      padding: 0; }
+      padding: 0;
+      text-align: center; }
 
   #team .locations {
     width: 75%; }
   #team .team-members {
     display: none; }
+  #team .team-members-mobile {
+    display: block; }
 
   footer h2.title {
     text-align: center; }
@@ -1330,7 +1398,6 @@ footer h2.title {
       padding: 0;
       overflow: hidden; }
       footer #social-contact ul li {
-        width: 32px;
         overflow: hidden;
         display: inline-block; }
 
@@ -1404,6 +1471,10 @@ footer h2.title {
   .login .footer-container {
     display: none; } }
 @media screen and (max-width: 480px) {
+  #logos ul li {
+    margin: 0 !important;
+    display: block; }
+
   #top.container {
     padding-top: 20px; }
     #top.container .wrapper {
@@ -1417,6 +1488,11 @@ footer h2.title {
   #tools h2, #sdk h2 {
     font-size: 40px; }
 
+  #team .team-members-mobile .team-member-name,
+  #team .team-members-mobile .team-member-role {
+    font-size: 27px; }
+  #team .team-members-mobile .team-member-role {
+    font-size: 17px; }
   #team .wrapper {
     padding: 0; }
   #team h2.multi-line {
@@ -1452,6 +1528,31 @@ footer h2.title {
     margin-top: 0; }
   .publisher-registration #top .form-left h4, .publisher-registration #top .form-right h4 {
     font-size: 18px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  #team .team-members-mobile img {
+    width: 50%; }
+
+  #logos ul {
+    width: 100%;
+    text-align: center; }
+    #logos ul li {
+      float: none;
+      display: inline-block;
+      width: 30%; }
+      #logos ul li img {
+        width: 100%; }
+
+  #slider .slide #slides {
+    background: #eff1f3; }
+    #slider .slide #slides .slidesjs-pagination {
+      height: 18px;
+      padding-top: 10px; }
+      #slider .slide #slides .slidesjs-pagination li a {
+        background: url("../images/layout/slider-dot-lg.png") no-repeat;
+        width: 18px;
+        height: 18px; }
+        #slider .slide #slides .slidesjs-pagination li a.active {
+          background-position: -18px 0; } }
 /* ==========================================================================
  * Helper classes
  * ========================================================================== */
