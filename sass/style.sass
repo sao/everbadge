@@ -432,6 +432,8 @@ h3
           background: rgba(255, 255, 255, 0.1)
 #top
   min-height: 722px
+  &.container
+    padding-top: 0
   .wrapper
     height: 758px
     position: relative
@@ -476,8 +478,13 @@ h3
 
 #tools
   background: #212122
+  h2.title
+    margin: 20px 0 65px
+  .tool-row
+    overflow: hidden
   .tool
     width: 528px
+    margin-bottom: 60px
     float: left
     .tool-desc
       width: 436px
@@ -487,6 +494,8 @@ h3
         text-decoration: none
       h3
         color: #00a1ff
+      p
+        width: 95%
     .icon
       float: left
       border: 2px solid #303031
@@ -628,6 +637,7 @@ h3
   min-height: 1165px
 
 .team-members-mobile-container
+  display: none
   padding: 0 40px
   box-sizing: border-box
   position: relative
@@ -644,7 +654,6 @@ h3
       right: 15px
 
 .team-members-mobile
-  display: none
   list-style: none
   margin: 0
   padding: 0
@@ -829,6 +838,8 @@ footer h2.title
       height: 32px
       line-height: 32px
       text-decoration: none
+      &:hover
+        color: #00a1ff
       &.facebook
         background-position: 0 -32px
       &.twitter
@@ -896,12 +907,12 @@ footer h2.title
         display: inline-block
   #social-contact ul
     li
-      width: 64px
+      width: 50px
       text-indent: -9999px
       a
-        background-size: 64px
-        width: 64px
-        height: 64px
+        background-size: 50px
+        width: 50px
+        height: 50px
         &.email
           background-image: url('../images/layout/contact-email.png')
         &.facebook
@@ -964,7 +975,7 @@ footer h2.title
         margin-top: 0
         width: 100%
       .signup
-        margin: 0 auto 20px
+        margin: 0 auto 70px
       #mobile-phones
         display: block
         margin: 0 auto
@@ -1044,6 +1055,10 @@ footer h2.title
         li
           overflow: hidden
           display: inline-block
+    #credits
+      p
+        span
+          display: none
   .slider-nav
     display: none
   #team
@@ -1117,6 +1132,9 @@ footer h2.title
     .footer-container
       display: none
 
+  .team-members-mobile-container
+    display: block
+
 @media screen and (max-width: 480px)
   #logos
     ul
@@ -1181,9 +1199,12 @@ footer h2.title
         margin-top: 0
       .form-left h4, .form-right h4
         font-size: 18px
-@media screen and (max-width: 320px)
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+
+  header
+    h1#logo
+      margin-top: 15px
   #team
     .team-members-mobile
       img
@@ -1203,15 +1224,16 @@ footer h2.title
       #slides
         background: #eff1f3
         .slidesjs-pagination
-          height: 18px
+          height: 9px
           padding-top: 10px
           li
             a
               background: url("../images/layout/slider-dot-lg.png") no-repeat
-              width: 18px
-              height: 18px
+              width: 9px
+              height: 9px
               &.active
-                background-position: -18px 0
+                background-position: -9px 0
+
 /* ==========================================================================
  * Helper classes
  * ==========================================================================

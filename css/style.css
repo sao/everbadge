@@ -789,6 +789,8 @@ h3.sub-title {
 
 #top {
   min-height: 722px; }
+  #top.container {
+    padding-top: 0; }
   #top .wrapper {
     height: 758px;
     position: relative; }
@@ -835,8 +837,13 @@ h3.sub-title {
 
 #tools {
   background: #212122; }
+  #tools h2.title {
+    margin: 20px 0 65px; }
+  #tools .tool-row {
+    overflow: hidden; }
   #tools .tool {
     width: 528px;
+    margin-bottom: 60px;
     float: left; }
     #tools .tool .tool-desc {
       width: 436px;
@@ -846,6 +853,8 @@ h3.sub-title {
         text-decoration: none; }
       #tools .tool .tool-desc h3 {
         color: #00a1ff; }
+      #tools .tool .tool-desc p {
+        width: 95%; }
     #tools .tool .icon {
       float: left;
       border: 2px solid #303031;
@@ -989,6 +998,7 @@ h3.sub-title {
   min-height: 1165px; }
 
 .team-members-mobile-container {
+  display: none;
   padding: 0 40px;
   box-sizing: border-box;
   position: relative; }
@@ -1004,7 +1014,6 @@ h3.sub-title {
     right: 15px; }
 
 .team-members-mobile {
-  display: none;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1185,6 +1194,8 @@ footer h2.title {
     height: 32px;
     line-height: 32px;
     text-decoration: none; }
+    #social-contact li a:hover {
+      color: #00a1ff; }
     #social-contact li a.facebook {
       background-position: 0 -32px; }
     #social-contact li a.twitter {
@@ -1249,12 +1260,12 @@ footer h2.title {
       display: inline-block; }
 
   #social-contact ul li {
-    width: 64px;
+    width: 50px;
     text-indent: -9999px; }
     #social-contact ul li a {
-      background-size: 64px;
-      width: 64px;
-      height: 64px; }
+      background-size: 50px;
+      width: 50px;
+      height: 50px; }
       #social-contact ul li a.email {
         background-image: url("../images/layout/contact-email.png"); }
       #social-contact ul li a.facebook {
@@ -1320,7 +1331,7 @@ footer h2.title {
       margin-top: 0;
       width: 100%; }
     #top #unlock .signup {
-      margin: 0 auto 20px; }
+      margin: 0 auto 70px; }
     #top #unlock #mobile-phones {
       display: block;
       margin: 0 auto;
@@ -1400,6 +1411,8 @@ footer h2.title {
       footer #social-contact ul li {
         overflow: hidden;
         display: inline-block; }
+  footer #credits p span {
+    display: none; }
 
   .slider-nav {
     display: none; }
@@ -1469,7 +1482,10 @@ footer h2.title {
     display: block;
     margin: 40px auto; }
   .login .footer-container {
-    display: none; } }
+    display: none; }
+
+  .team-members-mobile-container {
+    display: block; } }
 @media screen and (max-width: 480px) {
   #logos ul li {
     margin: 0 !important;
@@ -1529,6 +1545,9 @@ footer h2.title {
   .publisher-registration #top .form-left h4, .publisher-registration #top .form-right h4 {
     font-size: 18px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  header h1#logo {
+    margin-top: 15px; }
+
   #team .team-members-mobile img {
     width: 50%; }
 
@@ -1545,14 +1564,14 @@ footer h2.title {
   #slider .slide #slides {
     background: #eff1f3; }
     #slider .slide #slides .slidesjs-pagination {
-      height: 18px;
+      height: 9px;
       padding-top: 10px; }
       #slider .slide #slides .slidesjs-pagination li a {
         background: url("../images/layout/slider-dot-lg.png") no-repeat;
-        width: 18px;
-        height: 18px; }
+        width: 9px;
+        height: 9px; }
         #slider .slide #slides .slidesjs-pagination li a.active {
-          background-position: -18px 0; } }
+          background-position: -9px 0; } }
 /* ==========================================================================
  * Helper classes
  * ========================================================================== */

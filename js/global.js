@@ -22,13 +22,6 @@ $(document).ready(function() {
     openPosition: '80%'
   });
 
-  var phones = $('#phones');
-  function animatePhone() {
-    phones.animate({top:'+=10'}, 1000);
-    phones.animate({top:'-=10'}, 1000, animatePhone);
-  }
-  $(animatePhone);
-
   $("#slides").slidesjs({
     width: 947,
     height: 701,
@@ -62,11 +55,9 @@ $(document).ready(function() {
     breakpoint: 'small',
     enter: function() {
       jPM.on();
-      phones.stop(true, false);
     },
     exit: function() {
       jPM.off();
-      animatePhone();
     }
   });
 
